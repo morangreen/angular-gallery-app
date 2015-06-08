@@ -1,0 +1,68 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-12" ng-show='isSearch'>
+
+                    <input type="text" class="form-control" ng-model="query" placeholder="Search image..."
+                           onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search image...'">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12" ng-show='isPagination'>
+                    <pagination total-items="totalItems" items-per-page="itemsPerPage"
+                                ng-model="currentPage"
+                                ng-change="pageChanged()"></pagination>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1" ng-show='isSorting'>
+            <div class="btn-group" dropdown is-open="status.isopen" ng-show='isSorting'>
+                <button type="button" class="btn btn-primary dropdown-toggle" dropdown-toggle
+                        ng-disabled="disabled">
+                    Sort By <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#" ng-click="sortProp='title'">Title</a></li>
+                    <li><a href="#" ng-click="sortProp='date'">Date</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <!-- Split button -->
+            <div class="btn-group" dropdown>
+                <button type="button" class="btn btn-primary">Items Per Page</button>
+                <button type="button" class="btn btn-primary dropdown-toggle" dropdown-toggle>
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#" ng-click="itemsPerPage=5">5</a></li>
+                    <li><a href="#" ng-click="itemsPerPage=10">10</a></li>
+                    <li><a href="#" ng-click="itemsPerPage=15">15</a></li>
+                    <li><a href="#" ng-click="itemsPerPage=20">20</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-2" >
+            <input class="btn btn-danger" type="button" value="Clear Local Storage" ng-click="clearLocalStorage()"/>
+        </div>
+    </div>
+    <div class="col-md-2"
+         ng-repeat="img in filteredImages = images|
+          filter:query |
+          startFrom:(currentPage-1)*itemsPerPage|
+          limitTo:itemsPerPage |
+          orderBy: myOrderBy">
+
+        <div class="image_container">
+            <!--<span>{{img.date}}</span>-->
+            <img ng-src="{{img.url}}" title="{{img.title}}" class='image' no-image
+                 ng-click="open(img)"/>
+
+            <input class="btn btn-danger" type="button" value="x" ng-click="delete(img)"/>
+            <span class="img-date">{{img.date | myDate}}</span>
+        </div>
+    </div>
+    <gallery-modal></gallery-modal>
+</div>

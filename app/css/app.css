@@ -1,0 +1,37 @@
+/* app css stylesheet */
+
+body {
+    padding-top: 20px;
+}
+
+span.img-date {
+    font-size: x-small;
+}
+
+img.image {
+    float: left;
+    background-color: black;
+    height: 220px;
+    width: 220px;
+    padding: 1em;
+
+}
+
+.image_container {
+    float: left;
+    border: #ffffff thick solid;
+}
+
+.image_container:hover img {
+    cursor: pointer;
+}
+
+.image_container:hover input {
+    display: block;
+}
+
+.image_container input {
+    position: absolute;
+    display: none;
+    font-size: small;
+}

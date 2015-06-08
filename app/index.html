@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" ng-app="angularGallery">
+<head>
+    <meta charset="utf-8">
+    <title>Angular Gallery</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/app.css">
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/ngstorage/ngStorage.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+
+    <script src="js/controllers.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/directives.js"></script>
+    <script src="js/app.js"></script>
+</head>
+<body ng-controller="galleryAppController">
+<div>
+    <!--<my-gallery-->
+    <!--feed="[{'title': 'Blue river (much better in original size - press)','url': 'http://farm9.static.flickr.com/8305/7893507666_0d25cd9f30.jpg','date': 'Thu, 30 Aug 2012 10:41:00 -0400'}]"-->
+    <!--paging="true" results-per-page='12' search='true'>-->
+    <!--</my-gallery>-->
+
+    <!-- <my-gallery feed="imgArr"></my-gallery>         -->
+
+    <my-gallery feed="'/api/launchme/images.json'"
+                paging="true"
+                results-per-page='20'
+                search='true'></my-gallery>
+</div>
+</body>
+</html>

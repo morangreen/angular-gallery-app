@@ -1,0 +1,12 @@
+<div>
+    <div class="modal-body">
+        <carousel interval="myInterval">
+            <slide ng-repeat="slide in slides" active="slide.active">
+                <img ng-src="{{slide.url}}" title="{{slide.title}}" style="margin:auto;">
+            </slide>
+        </carousel>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-warning" ng-click="cancel()">X</button>
+    </div>
+</div>

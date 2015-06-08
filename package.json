@@ -1,0 +1,25 @@
+{
+  "name": "angular-gallery",
+  "version": "1.0.0",
+  "description": "angular gallery",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/morangreen/angular-gallery.git"
+  },
+  "author": "Moran Green",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/morangreen/angular-gallery/issues"
+  },
+  "homepage": "https://github.com/morangreen/angular-gallery#readme",
+  "dependencies": {
+    "bower": "^1.4.1",
+    "express": "^4.12.4",
+    "request": "^2.57.0"
+  }
+}
