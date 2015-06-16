@@ -1,5 +1,5 @@
-# angular-gallery
-Angular-gallery
+# angular-gallery-app
+Angular-gallery-app
 
 # How to start
 In order to start you need to ensure that the following tools are installed on you machine.
@@ -9,8 +9,8 @@ In order to start you need to ensure that the following tools are installed on y
   3. git (http://git-scm.com)
 
 # Set up the project
-1. git clone git@github.com:morangreen/angular-gallery.git
-2. cd angular-gallery
+1. git clone git@github.com:morangreen/angular-gallery-app.git
+2. cd angular-gallery-app
 3. npm install
 4. npm start
 5. Navigate to page app: http://localhost:8000
