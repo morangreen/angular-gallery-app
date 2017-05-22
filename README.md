@@ -2,7 +2,7 @@
 Angular-gallery-app
 
 # How to start
-dependencies:
+Dependencies:
   1. nodejs
   2. npm
 
