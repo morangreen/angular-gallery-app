@@ -4,16 +4,15 @@ Angular-gallery-app
 # How to start
 In order to start you need to ensure that the following tools are installed on you machine.
 
-  1. nodejs (http://nodejs.org)
-  2. npm (usually it comes with nodejs - https://www.npmjs.org)
-  3. git (http://git-scm.com)
+  1. nodejs
+  2. npm
 
 # Set up the project
 1. git clone git@github.com:morangreen/angular-gallery-app.git
 2. cd angular-gallery-app
 3. npm install
 4. npm start
-5. Navigate to page app: http://localhost:8000
+5. Navigate to: http://localhost:8000
 
 #Notes
 1. Known bug- slideshow shows all feed images instead of filtered images (by search)
