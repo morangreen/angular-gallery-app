@@ -2,8 +2,7 @@
 Angular-gallery-app
 
 # How to start
-In order to start you need to ensure that the following tools are installed on you machine.
-
+dependencies:
   1. nodejs
   2. npm
 
